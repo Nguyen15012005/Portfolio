@@ -103,7 +103,7 @@ function TimelineItem({ item, index }) {
       className={`relative flex gap-4 md:gap-8 items-start mb-10 ${isLeft ? "md:flex-row" : "md:flex-row-reverse"} flex-row`}
     >
       {/* Icon node */}
-      {/* <div className="flex-shrink-0 relative z-10">
+      <div className="flex-shrink-0 relative z-10">
         <motion.div
           className="w-12 h-12 rounded-xl flex items-center justify-center"
           style={{
@@ -124,7 +124,7 @@ function TimelineItem({ item, index }) {
         >
           {item.year}
         </div>
-      </div> */}
+      </div>
 
       {/* Content */}
       <motion.div
