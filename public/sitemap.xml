@@ -7,19 +7,4 @@
         <priority>1.0</priority>
     </url>
 
-    <url>
-        <loc>https://nguyennamtrungnguyen.vercel.app/projects</loc>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://nguyennamtrungnguyen.vercel.app/about</loc>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://nguyennamtrungnguyen.vercel.app/contact</loc>
-        <priority>0.8</priority>
-    </url>
-
 </urlset>
