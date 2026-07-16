@@ -1,0 +1,25 @@
+{
+  "name": "Nguyen Nam Trung Nguyen | Full Stack Developer",
+  "short_name": "TN Dev",
+  "description": "Portfolio of Nguyen Nam Trung Nguyen - Full Stack Developer specializing in React, Spring Boot, Java, PostgreSQL, Docker, REST APIs and Microservices.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#030712",
+  "theme_color": "#030712",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/avatar-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

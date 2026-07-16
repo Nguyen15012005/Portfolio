@@ -5,7 +5,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import CountUp from "react-countup";
+import CountUpModule from "react-countup";
 import { personalInfo, stats, aboutTimeline } from "../../data/portfolioData";
 import SectionWrapper, { SectionHeader } from "../ui/SectionWrapper";
 import { getColorFromKey } from "../../utils/helpers";
@@ -36,10 +36,20 @@ const ICON_MAP = {
   Calendar,
 };
 
+const CountUp = CountUpModule.default ?? CountUpModule;
+
+function resolveIcon(icon) {
+  if (typeof icon === "function") {
+    return icon;
+  }
+
+  return ICON_MAP[icon] ?? Award;
+}
+
 function StatCard({ stat, index }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
-  const Icon = ICON_MAP[stat.icon] ?? Award;
+  const Icon = resolveIcon(stat.icon);
 
   return (
     <motion.div
@@ -94,7 +104,7 @@ function TimelineItem({ item, index }) {
   const inView = useInView(ref, { once: true, margin: "-60px" });
   const isLeft = index % 2 === 0;
   const color = getColorFromKey(item.color);
-  const Icon = ICON_MAP[item.icon];
+  const Icon = resolveIcon(item.icon);
   const { isDark } = useTheme();
 
   return (

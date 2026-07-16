@@ -5,7 +5,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import CountUp from "react-countup";
+import CountUpModule from "react-countup";
 import {
   Trophy,
   Medal,
@@ -32,13 +32,14 @@ const ICON_MAP = {
   FileCode,
 };
 
+const CountUp = CountUpModule.default ?? CountUpModule;
+
 function StatBox({ stat, index }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-50px" });
   const color = getColorFromKey(stat.color);
   const Icon = ICON_MAP[stat.icon] || Award;
 
-  console.log("Stat:", stat.icon, Icon);
   const { isDark } = useTheme();
 
   return (
